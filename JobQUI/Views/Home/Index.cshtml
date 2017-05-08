@@ -1,0 +1,83 @@
+﻿@model JobQUI.Models.JobQViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<hr />
+<div class="row">
+
+    @*<div class="card col-md-5">
+            <div class="card-block">
+                <h4 class="card-title">What is JobQ</h4>
+                <p class="card-text">JobQ is a queing service for running command line calls("A Job") across multiple machines. This page is the UI for the server.</p>
+                <p class="card-text">
+                    From here you are able to see which jobs are currently in the queue and the status of each. Use the card to your right to create a job.
+                    Click on a table row to edit or delete a job.
+                </p>
+
+            </div>
+        </div>*@
+    <div class="card col-md-5">
+        <div class="card-block">
+            <h4 class="card-title">Client List</h4>
+
+            <p class="card-text">
+                <h5>Online</h5>
+                <ul class="list-group">
+                    @if (Model.Clients != null)
+                    {
+                        foreach (var client in Model.Clients)
+                        {
+                            <li class="list-group-item" onclick="toggleNext(this)">
+                                @client.Name @client.Status
+                                <ul>
+                                    @client.ConfigValues
+                                </ul>
+                            </li>
+                        }
+                    }
+                </ul>
+            </p>
+
+        </div>
+    </div>
+
+    <div class="col-md-1"></div>
+    <div class="card col-md-5">
+        <div id="AddJobCard" class="card-block">
+            <h4 class="card-title">Add a new job</h4>
+            <p class="card-text">Enter the Job Command exactly as you would in the cmd line, paramaters and all</p>
+
+            <form id="AddJobForm">
+
+                @Html.TextBox("jobData")
+                <input type="submit" name="button" class="btn btn-primary" />
+            </form>
+
+        </div>
+    </div>
+</div>
+<br />
+
+
+<h3 style="color:white">Jobs in Queue</h3>
+<div id="tables">
+    @Html.Partial("TablePartial", Model)
+</div>
+<!-- Edit Queuee Modal -->
+@Html.Partial("JobEditModalPartial")
+
+<!-- Delete Executed Modal -->
+@Html.Partial("JobDeleteModalPartial")
+
+
+
+<script>
+    function toggleNext(elemnt) {
+
+        $(this).first().toggle();
+
+    }
+</script>
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e8bb32ba-2fe8-4c9e-918a-5fba9518c5f2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/JobQ/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="09b71f16-8300-40fa-8555-10c120ccfea3" SourceId="1" SourceUrl="http://localhost:8000/JobQ/?xsd=xsd1" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="e4f0c902-4a5b-4f95-8f3d-0c8bb8bba32c" SourceId="1" SourceUrl="http://localhost:8000/JobQ/?xsd=xsd3" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="bc93cfee-a7da-4179-bf7c-a9376f98c6f1" SourceId="1" SourceUrl="http://localhost:8000/JobQ/?disco" />
+    <MetadataFile FileName="WcfEntryPoint.wsdl" MetadataType="Wsdl" ID="d0e14d9f-467d-406b-854a-a8b4067f7114" SourceId="1" SourceUrl="http://localhost:8000/JobQ/?wsdl" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="4c37b960-bce2-4410-9ccf-e45460b7ebdb" SourceId="1" SourceUrl="http://localhost:8000/JobQ/?xsd=xsd2" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="64422598-6d28-42ce-bfd6-6254f9622225" SourceId="1" SourceUrl="http://localhost:8000/JobQ/?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

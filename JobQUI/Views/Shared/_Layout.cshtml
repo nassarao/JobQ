@@ -1,0 +1,50 @@
+﻿@using JobQUI.Helpers;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobQ</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    @Styles.Render("~/Content/css")
+
+
+</head>
+<body background="~/Content/hixs_pattern_evolution.png" >
+    <nav class="navbar navbar-light bg-faded">
+        <a class="navbar-brand" href="#">
+            <img  src="~/Content/JobQLogo.png"   class="d-inline-block align-top logo" alt="">
+            
+        </a>
+    </nav>
+    @*<div class="titleBar">
+        <h1><img class="aLogo" style="float:left" src="~/Content/ALogo.png" />
+            <img id="logo" src="~/Content/JobQLogo.png" /> <img class="aLogo" style="float:right" src="~/Content/ALogo.png" /></h1>
+    </div>*@
+  @if (ViewData.ModelState["errors"] != null)
+  {<br />
+    @Html.AlertError(@ViewData.ModelState["errors"].Errors)
+  }
+    <div class="container body-content">
+        <br />
+        <br />
+        @RenderBody()
+
+
+    </div>
+    <footer class="bd-footer text-muted">
+        <div class="container">
+            <hr />
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="~/Scripts/JobManagerJS.js"></script>
+
+
+</body>
+</html>
